@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-theme="warning" data-mode="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Roniui</title>
+        <meta name="description" content="" />
+        <link
+            rel="shortcut icon"
+            href="./assets/images/people/logo.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Title of the project" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/roniui" />
+        <!--Replace with the current website url-->
+        <meta property="og:image" content="" />
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="tw-flex tw-w-full tw-flex-col tw-bg-[#fff] tw-text-black dark:tw-bg-slate-800 dark:tw-text-white lg:tw-h-[100vh]"
+    >
+        <main
+            class="tw-flex tw-h-full tw-w-full tw-overflow-auto max-lg:tw-flex-col"
+        >
+            <section
+                class="tw-flex tw-h-full tw-w-[450px] tw-flex-col tw-place-items-center tw-gap-4 tw-p-4 max-lg:tw-w-full lg:tw-shadow-xl lg:dark:tw-shadow-gray-600"
+            >
+                <!-- sidebar -->
+                <div
+                    class="tw-h-[250px] tw-w-[250px] tw-overflow-hidden tw-rounded-full"
+                >
+                    <img
+                        src="./assets/images/people/logo.png"
+                        class="tw-h-full tw-w-full tw-object-cover"
+                        alt="man"
+                        srcset=""
+                    />
+                </div>
+
+                <h1 class="tw-text-3xl tw-font-semibold">Roni</h1>
+
+                <p
+                    class="tw-mt-6 tw-max-w-[550px] tw-text-justify tw-text-gray-800 dark:tw-text-gray-300"
+                >
+                    Hi, I'm Roni — a web developer passionate about building simple and useful tools.
+                    My focus is on clean design, user-friendly interfaces, and practical functionality.
+                     I'm always exploring new tech to make the web more accessible and efficient.
+                </p>
+
+                <a
+                    href="mailto:roniui.github.io@gmail.com"
+                    class="btn-primary !tw-w-full tw-max-w-[550px] tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.02]"
+                >
+                    Contact me
+                </a>
+
+               
+
+                <div class="tw-mt-5 tw-flex tw-gap-5 tw-text-2xl">
+                    <a href="http://github.com/roniui" class="link">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    
+                    <a href="mailto:roniui.github.io@gmail.com" class="link">
+                        <i class="bi bi-envelope-at-fill"></i>
+                    </a>
+                </div>
+            </section>
+
+            <div class="tw-h-full tw-w-full tw-overflow-auto">
+                <header
+                    class="tw-relative tw-flex tw-w-full tw-overflow-auto tw-p-2 max-lg:tw-h-[150px] max-lg:tw-flex-col lg:tw-h-[80px]"
+                >
+                    <!-- tabs section -->
+                    <div
+                        class="tw-absolute tw-left-[50%] tw-top-4 tw-flex tw-h-[60px] tw-translate-x-[-50%] tw-gap-3 tw-overflow-x-auto tw-rounded-md tw-border-2 tw-border-primary tw-p-1 tw-px-4 max-md:tw-w-full md:tw-w-fit"
+                    >
+                        <button
+                            class="tab-btn tab-active"
+                            onclick="openTab(event, 'about')"
+                        >
+                            About
+                        </button>
+                        <button
+                            class="tab-btn"
+                            onclick="openTab(event, 'skills')"
+                        >
+                            Skills
+                        </button>
+                        <button
+                            class="tab-btn"
+                            onclick="openTab(event, 'experience')"
+                        >
+                            Experience
+                        </button>
+                        <button
+                            class="tab-btn"
+                            onclick="openTab(event, 'projects')"
+                        >
+                            Projects
+                        </button>                        
+                    </div>
+
+                    <div
+                        class="tw-m-2 tw-ml-auto tw-flex tw-place-items-center tw-gap-2 max-lg:tw-mt-auto"
+                    >
+                        <select
+                            onchange="switchTheme()"
+                            id="theme-selector"
+                            class="input !tw-h-fit !tw-p-1 tw-text-black dark:tw-text-white"
+                        >
+                            <option value="primary">Primary</option>
+                            <option value="warning" selected>warning</option>
+                            <option value="success">success</option>
+                        </select>
+
+                        <button class="tw-w-[30px]" onclick="toggleMode()">
+                            <i class="bi bi-sun-fill" id="toggle-mode-icon"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- tab contents -->
+                <div>
+                    <section
+                        class="tab-content tw-relative tw-flex tw-h-full tw-w-full tw-flex-col tw-overflow-auto max-lg:tw-p-4"
+                        data-tab-name="about"
+                    >
+                        <div
+                            class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+                        >
+                            <div
+                                class="tw-flex tw-flex-col tw-place-content-center"
+                            >
+                                <div
+                                    class="tw-text-6xl tw-font-semibold tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                                >
+                                    Hi 👋,
+                                    <br />
+                                    I am
+                                    <span class="tw-text-primary">
+                                        Roni
+                                    </span>
+                                </div>
+                                <div
+                                    class="tw-mt-4 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full"
+                                >
+                                  A developer who loves crafting clean, practical web tools that make everyday tasks easier. My approach combines minimal design with maximum usability to deliver smooth user experiences. I'm always exploring new technologies to push the boundaries of what the web can do.
+                                </div>
+
+                                <div
+                                    class="tw-mt-4 tw-flex tw-place-content-end tw-gap-4 tw-overflow-auto tw-p-2"
+                                >
+                                    <a
+                                        href="https://github.com/roniui"
+                                        class="btn-primary !tw-bg-[#c8cbf984] !tw-text-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                                    >
+                                        <span>Projects</span>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+                        class="tab-content tw-relative tw-flex tw-hidden tw-h-full tw-w-full tw-flex-col tw-overflow-auto max-lg:tw-p-4"
+                        data-tab-name="skills"
+                    >
+                        <div
+                            class="tw-flex tw-h-full tw-w-full tw-flex-wrap tw-place-content-center tw-gap-6 tw-p-[5%] tw-px-[25%] max-xl:tw-place-items-center max-lg:tw-px-[10%] max-md:tw-px-2"
+                        >
+                            <div
+                                class="tw-flex tw-h-[150px] tw-w-[150px] tw-place-content-center tw-items-center tw-rounded-lg tw-border-2 tw-border-primary tw-bg-white tw-shadow-xl"
+                            >
+                                <div>
+                                    <img
+                                        src="./assets/images/icons/html5.png"
+                                        alt="html5"
+                                        srcset=""
+                                        class="tw-object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            <div
+                                class="tw-flex tw-h-[150px] tw-w-[150px] tw-place-content-center tw-items-center tw-rounded-lg tw-border-2 tw-border-primary tw-bg-white tw-shadow-xl"
+                            >
+                                <div>
+                                    <img
+                                        src="./assets/images/icons/javascript.png"
+                                        alt="javascript"
+                                        srcset=""
+                                        class="tw-object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                class="tw-flex tw-h-[150px] tw-w-[150px] tw-place-content-center tw-items-center tw-rounded-lg tw-border-2 tw-border-primary tw-bg-white tw-shadow-xl"
+                            >
+                                <div>
+                                    <img
+                                        src="./assets/images/icons/css.png"
+                                        alt="css"
+                                        srcset=""
+                                        class="tw-object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            <div
+                                class="tw-flex tw-h-[150px] tw-w-[150px] tw-place-content-center tw-items-center tw-rounded-lg tw-border-2 tw-border-primary tw-bg-white tw-shadow-xl"
+                            >
+                                <div>
+                                    <img
+                                        src="./assets/images/icons/tailwind.png"
+                                        alt="react js"
+                                        srcset=""
+                                        class="tw-object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            <div
+                                class="tw-flex tw-h-[150px] tw-w-[150px] tw-place-content-center tw-items-center tw-rounded-lg tw-border-2 tw-border-primary tw-bg-white tw-shadow-xl"
+                            >
+                                <div>
+                                    <img
+                                        src="./assets/images/icons/firestore.png"
+                                        alt="firebase"
+                                        srcset=""
+                                        class="tw-object-contain"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+    class="tab-content tw-relative tw-flex tw-hidden tw-h-full tw-w-full tw-flex-col tw-overflow-auto max-lg:tw-p-4"
+    data-tab-name="experience"
+>
+    <div
+        class="tw-flex tw-h-full tw-w-full tw-flex-wrap tw-place-content-center tw-gap-6 tw-p-[5%] tw-px-[25%] max-xl:tw-place-items-center max-md:tw-px-1"
+    >
+        <div></div>
+
+        <div class="timeline tw-flex tw-flex-col tw-gap-5">
+            <div class="timeline-container tw-relative tw-mb-8">
+                <div
+                    class="tw-flex tw-max-w-[550px] tw-flex-col tw-gap-2 tw-p-1 max-lg:tw-max-w-[320px]"
+                >  
+                    <h3 class="tw-text-3xl">ResistorHub</h3>
+                    <p class="tw-text-gray-500 dark:tw-text-gray-200">
+                        2024 - Present
+                    </p>
+                    <p>
+                        Built and published a fast, offline-ready PWA for resistor value calculation. Focused on responsive UI, Firebase Firestore integration(in development), and SEO optimization. Deployed on GitHub Pages.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-container tw-relative tw-mb-8">
+                <div
+                    class="tw-flex tw-max-w-[550px] tw-flex-col tw-gap-2 tw-p-1 max-lg:tw-max-w-[320px]"
+                >
+                    <h3 class="tw-text-3xl">AngleTuner</h3>
+                    <p class="tw-text-gray-500 dark:tw-text-gray-200">
+                        2025 (In Progress)
+                    </p>
+                    <p>
+                        Developing a digital angle meter web app using device motion sensors. Designed for mobile use with real-time angle updates, dark mode, and PWA support.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-container tw-relative tw-mb-8">
+                <div
+                    class="tw-flex tw-max-w-[550px] tw-flex-col tw-gap-2 tw-p-1 max-lg:tw-max-w-[320px]"
+                >
+                    <h3 class="tw-text-3xl">Web Development Learning</h3>
+                    <p class="tw-text-gray-500 dark:tw-text-gray-200">
+                        2023 - Present
+                    </p>
+                    <p>
+                        Self-taught in HTML, CSS, JavaScript, Tailwind CSS, GitHub Pages, and Firebase. Continuously building and improving projects to strengthen frontend and PWA development skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                  <section
+  class="tab-content tw-relative tw-flex tw-hidden tw-h-full tw-w-full tw-flex-col tw-overflow-auto max-lg:tw-p-2"
+  data-tab-name="projects"
+>
+  <div
+    class="tw-flex tw-h-full tw-w-full tw-flex-wrap tw-justify-start tw-gap-6 tw-p-4 max-xl:tw-place-items-center"
+  >
+    <!-- ResistorHub Project -->
+    <div class="tw-max-w-md tw-rounded-2xl tw-shadow-lg dark:tw-shadow-md tw-p-6">
+      <h3 class="tw-text-2xl tw-font-bold">ResistorHub</h3>
+      <p class="tw-text-gray-600 dark:tw-text-gray-300 tw-mt-2">
+        A Progressive Web App for calculating resistor values from color bands. Works offline.
+      </p>
+      <a
+        href="https://roniui.github.io/resistor"
+        class="btn-primary tw-mt-4"
+        target="_blank"
+      >View Live Site</a>
+    </div>
+
+    <!-- AngleTuner Project -->
+    <div class="tw-max-w-md tw-rounded-2xl tw-shadow-lg dark:tw-shadow-md tw-p-6">
+      <h3 class="tw-text-2xl tw-font-bold">AngleTuner</h3>
+      <p class="tw-text-gray-600 dark:tw-text-gray-300 tw-mt-2">
+        An intuitive angle meter that uses device sensors. Built as a responsive PWA with a clean UI.
+      </p>
+      <a
+        href="https://roniui.github.io/angletuner"
+        class="btn-primary tw-mt-4"
+        target="_blank"
+      >View Live Site</a>
+    </div>
+
+    <!-- DateMate Project -->
+    <div class="tw-max-w-md tw-rounded-2xl tw-shadow-lg dark:tw-shadow-md tw-p-6">
+      <h3 class="tw-text-2xl tw-font-bold">DateMate</h3>
+      <p class="tw-text-gray-600 dark:tw-text-gray-300 tw-mt-2">
+        Calculate the number of days between two dates. Fast, mobile-friendly, and simple to use.
+      </p>
+      <a
+        href="https://roniui.github.io/date/calculator.html"
+        class="btn-primary tw-mt-4"
+        target="_blank"
+      >View Live Site</a>
+    </div>
+  </div>
+</section>
+                </div>
+
+                <footer
+                    class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
+                ></footer>
+            </div>
+        </main>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>
